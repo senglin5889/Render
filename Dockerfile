@@ -2,6 +2,7 @@ FROM node:latest
 EXPOSE 3000
 WORKDIR /app
 COPY files/* /app/
+USER 10014
 
 RUN apt-get update &&\
     apt-get install -y iproute2 &&\
